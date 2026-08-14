@@ -28,12 +28,11 @@ html {
 }
 
 .page {
-    width: 100%;
-    min-height: 100vh;
-
+    width: min(100%, 980px);
+    margin: 0 auto;
     background: var(--background);
-
-    padding: 48px 6vw 64px;
+    min-height: 100vh;
+    padding: 28px 34px 42px;
 }
 
 .section {
