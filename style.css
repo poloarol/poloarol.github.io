@@ -28,20 +28,18 @@ html {
 }
 
 
-body {
-    background: #121212;
-    color: var(--text);
-    font-family: var(--sans);
-    line-height: 1.5;
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: clamp(32px, 5vw, 72px) clamp(24px, 7vw, 120px);
 }
 
 
 .page {
-    width: min(100%, 980px);
-    margin: 0 auto;
-    background: var(--background);
+    width: 100%;
     min-height: 100vh;
-    padding: 28px 34px 42px;
+    background: var(--background);
+    padding: 48px 6vw 64px;
 }
 
 
