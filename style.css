@@ -1,0 +1,471 @@
+:root {
+    --background: #071918;
+    --panel: #0b2827;
+    --panel-light: #103331;
+
+    --text: #edf3e9;
+    --muted: #a7b8b2;
+
+    --cyan: #19b9ff;
+    --pink: #ff2bd6;
+
+    --border: rgba(160, 210, 205, 0.16);
+
+    --serif: "DM Serif Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #121212;
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.5;
+}
+
+
+.page {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    background: var(--background);
+    min-height: 100vh;
+    padding: 28px 34px 42px;
+}
+
+
+.section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* --------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 42px;
+
+    padding: 24px 10px 50px;
+}
+
+
+.hero-visual {
+    min-height: 260px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(26, 113, 108, 0.45),
+            transparent 52%
+        ),
+        var(--panel);
+
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.visual-glow {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 55% 45%,
+            rgba(20, 193, 181, 0.18),
+            transparent 38%
+        );
+}
+
+
+.visual-label {
+    position: absolute;
+
+    left: 14px;
+    bottom: 13px;
+
+    font-size: 7px;
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.eyebrow {
+    font-size: 7px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #a7d2c8;
+
+    margin-bottom: 7px;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 22px;
+}
+
+
+h1 span {
+    display: block;
+}
+
+
+.hero-content p {
+    max-width: 560px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    margin-bottom: 10px;
+}
+
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 9px;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    background: #c9f3dc;
+    color: #06211d;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+
+.primary-button span {
+    font-size: 12px;
+}
+
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    background: #e0faea;
+}
+
+
+/* --------------------------------
+   ACCENT
+-------------------------------- */
+
+.accent-bar {
+    width: 30px;
+    height: 5px;
+
+    border-radius: 999px;
+
+    margin: 0 auto 32px;
+}
+
+
+.accent-bar.pink {
+    background: var(--pink);
+}
+
+
+/* --------------------------------
+   HEADINGS
+-------------------------------- */
+
+h2 {
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    line-height: 1;
+
+    letter-spacing: -0.03em;
+
+    margin-bottom: 20px;
+}
+
+
+/* --------------------------------
+   CAPABILITIES
+-------------------------------- */
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border: 1px solid rgba(79, 188, 226, 0.8);
+}
+
+
+.capability-card {
+    position: relative;
+
+    min-height: 135px;
+
+    padding: 14px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    transition:
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+
+.capability-card:hover {
+    background: var(--panel-light);
+    transform: translateY(-2px);
+}
+
+
+.card-number {
+    font-size: 7px;
+    color: #83c8bd;
+
+    margin-bottom: 10px;
+}
+
+
+.capability-card h3 {
+    font-size: 17px;
+    line-height: 1.05;
+
+    margin-bottom: 7px;
+}
+
+
+.capability-card p {
+    max-width: 250px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------
+   PROCESS
+-------------------------------- */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+
+.process-card {
+    min-height: 105px;
+
+    padding: 14px;
+
+    background: var(--panel);
+
+    border-radius: 7px;
+}
+
+
+.process-card span {
+    display: block;
+
+    font-size: 7px;
+    color: #82c9be;
+
+    margin-bottom: 8px;
+}
+
+
+.process-card h3 {
+    font-size: 15px;
+    line-height: 1;
+
+    margin-bottom: 7px;
+}
+
+
+.process-card p {
+    color: var(--muted);
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+
+/* --------------------------------
+   CONTACT
+-------------------------------- */
+
+.contact {
+    background: var(--panel);
+
+    border-radius: 10px;
+
+    padding: 28px 24px 24px;
+
+    margin-top: 4px;
+}
+
+
+.contact h2 {
+    margin-bottom: 8px;
+}
+
+
+.contact > p {
+    max-width: 560px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    margin-bottom: 8px;
+}
+
+
+.email-link {
+    display: inline-block;
+
+    color: #c8f1dc;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-bottom: 16px;
+}
+
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 7px;
+}
+
+
+.social-links a {
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 7px;
+    font-weight: 600;
+
+    transition:
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+
+.social-links a:hover {
+    color: white;
+    border-color: rgba(255,255,255,0.5);
+}
+
+
+/* --------------------------------
+   RESPONSIVE
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 20px 18px 28px;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 22px;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .hero-visual {
+        min-height: 220px;
+    }
+
+
+    .capability-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .process-card {
+        min-height: auto;
+    }
+
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
