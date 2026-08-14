@@ -27,21 +27,14 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .page {
     width: 100%;
     min-height: 100vh;
-    padding: clamp(32px, 5vw, 72px) clamp(24px, 7vw, 120px);
-}
 
-
-.page {
-    width: 100%;
-    min-height: 100vh;
     background: var(--background);
+
     padding: 48px 6vw 64px;
 }
-
 
 .section {
     width: 100%;
